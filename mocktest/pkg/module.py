@@ -1,6 +1,17 @@
 
 
-class Tester(object):
+
+class Base:
+    def __init__(self):
+        print "in base"
+
+class Tester(Base):
+
+    def __init__(self):
+        print "in tester"
+
+        Base.__init__(self)
+    
 
     @staticmethod
     def _postfix():
